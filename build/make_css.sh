@@ -1,13 +1,12 @@
-#!/bin/bash
+#!/bin/sh
 
-set BOOTSTRAP_LESS = ./bootstrap/less/bootstrap.less
-set BOOTSTRAP_RESPONSIVE_LESS = ./bootstrap/less/responsive.less
-set OUT_NAME=dist/csacr
+BOOTSTRAP_LESS="bootstrap/less/bootstrap.less"
+BOOTSTRAP_RESPONSIVE_LESS="bootstrap/less/responsive.less"
 
 mkdir -p dist
 
-lessc ${BOOTSTRAP_LESS} > ${OUT_NAME}.css
-lessc ./less/cancerregulome.less >> ${OUT_NAME}.css
-lessc --compress ${BOOTSTRAP_LESS} > ${OUT_NAME}.min.css
-lessc ${BOOTSTRAP_RESPONSIVE_LESS} > ${OUT_NAME}-responsive.css
-lessc --compress ${BOOTSTRAP_RESPONSIVE_LESS} > ${OUT_NAME}-responsive.min.css
+lessc ${BOOTSTRAP_LESS} > dist/csacr.css
+lessc ./less/cancerregulome.less >> dist/csacr.css
+lessc --compress ${BOOTSTRAP_LESS} > dist/csacr.min.css
+lessc ${BOOTSTRAP_RESPONSIVE_LESS} > dist/csacr-responsive.css
+lessc --compress ${BOOTSTRAP_RESPONSIVE_LESS} > dist/csacr-responsive.min.css
