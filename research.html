@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=9">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Cancer Regulome :: Research</title>
+
+    <link href="http://fonts.googleapis.com/css?family=Pontano+Sans|Gentium+Basic" rel="stylesheet" type="text/css">
+    <link href="css/csacr.css" rel="stylesheet">
+    <link href="css/csacr-responsive.css" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico">
+
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+    <script src="js/html5.js"></script>
+    <link href="css/csacr.ie.css" rel="stylesheet">
+<![endif]-->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+    <script type="text/javascript" src="js/google_analytics.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+          $("#menusContainer").load("menus.html");
+        });
+    </script>
+</head>
+<body>
+<div class="container">
+    <div id="menusContainer"></div>
+    <div id="mainContainer">
+        <a name="multivariate_analysis"><br/><br/></a>
+        <div class="row">
+            <div class="span9">
+                <div class="page-header">
+                    <h2>Multivariate Analysis</h2>
+                </div>
+                <p>
+                    We develop methods for finding associations among the heterogeneous data types in TCGA data. This includes the construction of a feature
+                    matrix: a large, heterogeneous matrix which combines virtually all available information regarding patients and samples for a given tumor
+                    type. The feature matrix is created by parsing and standardizing both public and protected TCGA data available through the DCC: clinical,
+                    mRNA (gene) expression, DNA methylation, microRNA expression, copy number variation, somatic (DNA) mutation data, and RPPA (protein) data.
+                    <br/>
+                    <br/>
+                    Our Center also incorporates other sources of information from the GCCs and other GDACs. This mixed-type feature matrix includes numerical
+                    data (both continuous and discrete) and arbitrary unordered categorical data, while also allowing for missing values, a critical factor when
+                    working with biomedical data.
+                    <br/>
+                    <br/>
+                    Typical matrices include 20,000 to 50,000 features describing 200 to 1000 tumor samples, and provide a starting-point for all of our downstream
+                    analyses, as well as a simple, standardized format for data-sharing between collaborators. From the feature matrix, we derive statistically
+                    significant Pairwise Associations, and multivariate associations through <a href="http://rf-ace.googlecode.com" target="_blank">Random Forest</a>
+                    analysis.  These analyses are performed systematically for every tumor analysis working group where the Center is a participant.
+                </p>
+            </div>
+            <div class="span3">
+                <div class="well sideinfo">
+                    <div class="sideinfo-heading">
+                        <h4>Analysis Working Groups</h4>
+                    </div>
+                    <ul class="cancer-link">
+                        <li><a href="cancerstudies.html#breast_cancer">Breast Cancer</a></li>
+                        <li><a href="cancerstudies.html#colorectal_cancer">Colorectal Cancer</a></li>
+                        <li><a href="cancerstudies.html#endometrial_cancer">Endometrial Cancer</a></li>
+                        <li><a href="cancerstudies.html#glioblastoma_multiforme">Glioblastoma Multiforme</a></li>
+                        <li><a href="cancerstudies.html#ovarian_cancer">Ovarian Cancer</a></li>
+                        <li><a href="cancerstudies.html#pancancer_analysis">Pan-Cancer Analysis</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <a name="protein_domainlevel_mutation_annotations"><br/><br/></a>
+        <div class="row">
+            <div class="span12">
+                <div class="row">
+                    <div class="span9">
+                        <div class="page-header">
+                            <h2>Protein Domain-level Mutation Annotations</h2>
+                        </div>
+                        <p>
+                            The impact of somatic mutations are assessed by including protein domain-level binarization as features in pairwise statistical tests
+                            of heterogeneous TCGA data. Somatic mutation data is converted into protein domain information via a pipeline which incorporates the
+                            software tool <a href="http://www.openbioinformatics.org/annovar/" target="_blank">ANNOVAR</a> (reference: Wang K, Li M, Hakonarson H.
+                            ANNOVAR: Functional annotation of genetic variants from next-generation sequencing data Nucleic Acids Research, 38:e164, 2010).
+                            <br/>
+                            <br/>
+                            Several features are generated for each gene depending on the type and sequence position of somatic mutations for each tumor sample in
+                            the data set. Synonymous, missense, nonsense, and frameshift mutation types are considered. Protein domains including any of these
+                            mutation types are annotated as such, with nonsense and frameshift annotations being propagated to all subsequent protein domains.
+                            Example associations identified by pairwise statistical tests between these binary somatic mutation annotations and other data types
+                            include mutual exclusivity and co-occurrence of genomic events, subtype or other phenotype-associated mutations, and significant changes
+                            in gene and miRNA expression, all of which can be viewed within <a href="http://explorer.cancerregulome.org/" target="_blank">Regulome Explorer</a>.
+                            <br/>
+                            <br/>
+                            Users may review mutation annotations for selected genes and cancers in <a href="http://genespot.cancerregulome.org/" target="_blank">GeneSpot</a>, using the <strong>"Protein Mutations Per Cancer Type"</strong> map.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a name="regulome_explorer_research"><br/><br/></a>
+        <div class="row">
+            <div class="span9">
+                <div class="page-header">
+                    <h2>Regulome Explorer</h2>
+                </div>
+                <h4>Multi-Scale Association Explorer (MSAE)</h4>
+                <br/>
+                <p>
+                    One of the key applications within Regulome Explorer, the MSAE enables users to search, filter, and visualize analytical results generated from
+                    TCGA data. Associations are primarily displayed within the context of genomic coordinates. However, other views may also be used to evaluate
+                    associations, including graphs and tables. Two dimensional distributions of feature pairs (identified by association analysis), are also provided
+                    for further investigation.
+                </p>
+                <br/>
+                <img src="images/regulomeExplorer1.png" alt="Regulome Explorer">
+                <small><b>a)</b> The set of feature associations is filtered according to user-specified parameters. <b>b)</b> The circular layout displays the
+                    associations as edges in the Center connecting the features (with genomic coordinates) displayed around the perimeter. The outer ring displays
+                    cytogenetic bands. The inner ring displays associations that contain features lacking genomic coordinates. <b>c)</b> Sub-chromosome scale
+                    associations are explored with the use of a linear browser. <b>d,e)</b> A scale-independent view of the results is presented as a data table and
+                    a network. <b>f)</b> The association window, a two dimensional plot of the feature pair, is rendered in accordance with the specific feature types.
+                </small>
+                <br/>
+                <br/>
+            </div>
+            <div class="span3">
+                <div class="well sideinfo">
+                    <h8>Use <a href="http://explorer.cancerregulome.org" target="_blank">Regulome Explorer</a></h8>
+                    <ul>
+                        <li><a href="http://explorer.cancerregulome.org/all_pairs/" target="_blank">All Pairs Analysis</a></li>
+                        <li><a href="http://explorer.cancerregulome.org/re/" target="_blank">Random Forest Analysis</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="span9">
+                <h4>Colorectal Cancer Aggressiveness Explorer</h4>
+                <br/>
+                <p>
+                    The CRC Aggressiveness Explorer allows the exploration of molecular signatures associated with aggressive CRC, as described in Comprehensive
+                    Molecular Characterization of Human Colon and Rectal Tumors (manuscript in press). A molecular signature can be one of a variety of types: a
+                    change in the transcription level of a protein-coding gene or a microRNA, a somatic mutation, a somatic copy number alteration, or the change
+                    in DNA methylation near a gene promoter. Each signature has a score indicating the statistical significance of the evidence for its association
+                    with tumor aggressiveness. The score is a composite of individual association scores for tumor stage, the fraction of positive lymph nodes in
+                    the vicinity of the tumor, histological type (mucinous or non-mucinous carcinoma), and for the presence or absence of vascular invasion,
+                    lymphatic invasion, and distant metastasis. A positive score implies that the signature is more prevalent in tumors with aggressive colorectal
+                    cancer, while a negative score indicates the opposite. In the CRC Aggressiveness Explorer, these are shown in red and blue respectively, with a
+                    color gradient for the strength of association.
+                </p>
+                <br/>
+                <img src="images/crcExplorer.png" alt="Colorectal Cancer Aggressiveness Explorer">
+                <br/>
+                <br/>
+            </div>
+            <div class="span3">
+                <div class="well sideinfo">
+                    <h8>Use <a href="http://explorer.cancerregulome.org/crc_agg/" target="_blank">CRC Aggressiveness Explorer</a></h8>
+                </div>
+            </div>
+        </div>
+        <a name="pubcrawl_research"><br/><br/></a>
+        <div class="row">
+            <div class="span9">
+                <div class="page-header">
+                    <h2>Pubcrawl</h2>
+                </div>
+                <p>
+                    We are combining semantic-based information in the literature with multivariate data-driven analysis to investigate the relationship between
+                    genomic aberrations in cancer and the ensuing dysfunction of biological networks. To characterize semantic information in the literature, we
+                    have calculated a normalized MEDLINE distance (NMD) according to Cilibrasi and Vitanyi [Rudi L. Cilibrasi and Paul M.B. Vitanyi. The Google
+                    similarity distance. IEEE Transactions on Knowledge and Data Engineering, 19:370-383, 2007.] for all gene name pairs and their aliases in
+                    MEDLINE titles and abstracts. From this matrix of semantic distances, we can cluster, traverse, and apply many other machine-learning & graph
+                    theoretic approaches to literature-based networks.
+                    <br/>
+                    <br/>
+                    We are combining this prior information with multivariate data-driven associations inferred from TCGA data sets (see 1 above) to validate
+                    known associations and identify previously uncharacterized areas of investigation. While we have pre-computed the normalized semantic distance
+                    for all gene name pairs, de novo search capabilities are also available for any user-defined term (e.g., calculating the distance between
+                    ‘metastasis’ and all gene names).
+                </p>
+                <br/>
+                <img src="images/pubcrawl1.png" alt="Pubcrawl">
+            </div>
+            <div class="span3">
+                <div class="well sideinfo">
+                    <h8>Use <a href="http://explorer.cancerregulome.org/pubcrawl/" target="_blank">Pubcrawl</a></h8>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div>&copy; 2012, Institute for Systems Biology, All Rights Reserved</div>
+    </footer>
+</div>
+</body>
+</html>

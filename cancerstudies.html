@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=9">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Cancer Regulome :: Cancer Studies</title>
+
+    <link href="http://fonts.googleapis.com/css?family=Pontano+Sans|Gentium+Basic" rel="stylesheet" type="text/css">
+    <link href="css/csacr.css" rel="stylesheet">
+    <link href="css/csacr-responsive.css" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="js/html5.js"></script>
+    <link href="css/csacr.ie.css" rel="stylesheet">
+    <![endif]-->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+    <script type="text/javascript" src="js/google_analytics.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+          $("#menusContainer").load("menus.html");
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div id="menusContainer"></div>
+        <div id="mainContainer">
+            <div class="row">
+                <div class="span9">
+                    <div class="page-header hero-unit">
+                        <h2>
+                            Cancer Studies
+                            <small>
+                                <p>
+                                    <a href="http://www.systemsbiology.org" target="_blank">Institute for Systems Biology</a>
+                                    and
+                                    <a href="http://www.mdanderson.org" target="_blank">MD Anderson Cancer Center</a>
+                                </p>
+                            </small>
+                        </h2>
+                    </div>
+                    <p>
+                        The Cancer Genome Atlas (TCGA) targets more than 20 different cancer types, collecting hundreds (or thousands) of samples
+                        for each type.  Each disease is studied individually by multiple groups across TCGA.  The Center is analyzing data collected for many of these diseases in order to understand each cancer more deeply.  The GDAC is also exploring associations between the various diseases to identify commonalities.
+                    </p>
+                </div>
+                <div class="span3">
+                    <div class="well sideinfo">
+                        <div class="sideinfo-heading">
+                            <h4>Analysis Working Groups</h4>
+                        </div>
+                        <ul class="cancer-link">
+                            <li>
+                                <a href="cancerstudies.html#breast_cancer">Breast Cancer</a>
+                            </li>
+                            <li>
+                                <a href="cancerstudies.html#colorectal_cancer">Colorectal Cancer</a>
+                            </li>
+                            <li>
+                                <a href="cancerstudies.html#endometrial_cancer">Endometrial Cancer</a>
+                            </li>
+                            <li>
+                                <a href="cancerstudies.html#glioblastoma_multiforme">Glioblastoma Multiforme</a>
+                            </li>
+                            <li>
+                                <a href="cancerstudies.html#ovarian_cancer">Ovarian Cancer</a>
+                            </li>
+                            <li>
+                                <a href="cancerstudies.html#pancancer_analysis">Pan-Cancer Analysis</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <a name="breast_cancer">
+                <br/>
+                <br/>
+            </a>
+            <div class="row">
+                <div class="span9">
+                    <div class="page-header">
+                        <h2>Breast Cancer</h2>
+                    </div>
+                    <div>
+                        The Center participated in TCGA breast cancer analysis working group, contributing to working group
+        discussions, analyses, presentation of results, and preparation of TCGA breast cancer marker paper. Numerous analyses were performed by the GDAC, related in particular to the relationship
+        between individual molecular features and various subtypes discovered through supervised and unsupervised
+        methods. As a companion feature to the manuscript, the GDAC has provided a comprehensive feature matrix,
+        including statistical pairwise analysis, that can be explored interactively via
+                        <a href="http://explorer.cancerregulome.org/re/" target="_blank">Regulome Explorer</a>
+                        using any modern web browser.
+                    </div>
+                    <img src="images/brca1.png" alt="brca molecular features"><br/>
+                    <small> <b>Associations between molecular features.</b>
+                        Statistically significant associations between features with genomic coordinates are indicated 
+                        by arcs connecting pairs of dots which represent the features. Two examples are shown: 
+                        significant associations between microRNA and mRNA expression levels (Left), and between copy-number 
+                        and mRNA expression (Right).
+                    </small>
+                </div>
+                <div class="span3">
+                    <div class="well sideinfo">
+                        <div class="sideinfo-heading">
+                            <h4>Publications</h4>
+                        </div>
+                        The Cancer Genome Atlas Research Network. Comprehensive molecular portraits of human breast tumours.
+                        <br/>
+                        <a href="http://www.nature.com/nature/journal/v490/n7418/full/nature11412.html" target="_blank">Nature 490, 61–70 (2012)</a>
+                    </div>
+                    <div class="well sideinfo">
+                        <div class="sideinfo-heading">
+                            <h4>Resources</h4>
+                        </div>
+                        Use
+                        <a href="http://explorer.cancerregulome.org/all_pairs/brca" target="_blank">BRCA on Regulome Explorer: All Pairs</a>
+                    </div>
+                </div>
+            </div>
+            <a name="colorectal_cancer">
+                <br/>
+                <br/>
+            </a>
+            <div class="row">
+                <div class="span9">
+                    <div class="page-header">
+                        <h2>Colorectal Cancer</h2>
+                    </div>
+                    <div>
+                        The Center participates in TCGA Colorectal Analysis working group, contributing to working group discussions,
+        analyses, presentation of results, and preparation of TCGA colorectal marker paper (in press). Numerous
+        analyses were performed by our GDAC, e.g. centered on micro-RNAs,
+        DNA structural variation, signatures associated with anatomical position, signature association with specific
+        subgroupings of microsatellite instability categories.
+        For the colorectal manuscript, we focused on six clinical variables associated with tumor aggressiveness, and generated
+        a score for the association of molecular features with those six variables. The aggressiveness score is a
+        composite of association score with six clinical variables in which p-values for each
+        individual comparison are combined using the weighted Fisher’s method from which an overall p-value is
+        derived. The aggressiveness score is the negative of the base-10 logarithm of this overall p-value augmented
+        by a plus or minus depending on whether the signature is higher or lower in the more aggressive tumors,
+        respectively. This score is color-coded in the visual display with a blue to red color scale from low to high
+        score. To limit the extent of the display, the score is saturated at -10 and +10.
+                    </div>
+                    <img src="images/colorectal1.png" alt="colorectal aggressiveness">
+                    <small> <b>A “hotspot” of CRC aggressiveness in region 20q13.12.</b>
+                        Certain chromosomal regions are enriched in clinically
+        associated molecular features. Region 20q13.12 includes a local amplification (orange) and 11 genes (blue), all of which are expressed
+        more highly in aggressive tumors. A number of methylation probes (green) are also statistically associated with tumor aggression,
+        nearly all (8/10) with decreased levels in aggressive tumors.
+                    </small>
+                </div>
+                <div class="span3">
+                    <div class="well sideinfo">
+                        <div class="sideinfo-heading">
+                            <h4>Publications</h4>
+                        </div>
+                        The Cancer Genome Atlas Research Network. Comprehensive molecular characterization of human colon and rectal cancer.
+                        <br/>
+                        <a href="http://www.nature.com/nature/journal/v487/n7407/full/nature11252.html" target="_blank">Nature 487, 330-337 (2012)</a>
+                    </div>
+                    <div class="well sideinfo">
+                        <div class="sideinfo-heading">
+                            <h4>Resources</h4>
+                        </div>
+                        Use
+                        <a href="http://explorer.cancerregulome.org/crc_agg" target="_blank">CRC Aggressiveness Explorer</a>
+                    </div>
+                </div>
+            </div>
+            <a name="endometrial_cancer">
+                <br/>
+                <br/>
+            </a>
+            <div class="row">
+                <div class="span9">
+                    <div class="page-header">
+                        <h2>Endometrial Cancer</h2>
+                    </div>
+                    <div>
+                        TCGA recently interrogated a large set of endometrial carcinomas, including both serous (n=53) and
+        mixed/endometrioid (n=280) types, to generate the multi-dimensional data types. The Center is carrying out
+        data analysis on molecular classification and association with clinical and pathological variables. Using the
+        RNASeq gene expression profile, we have identified three gene expression subtypes in TCGA endometrial
+        carcinoma, which are then termed as ‘mitotic’, ‘hormonal’, and ‘immunoresponsive’, respectively, on the basis
+        of pathway analysis and gene content. These clusters are significantly correlated with tumor histology, grade,
+        stage, patient overall survival and progression-free survival. Similar to serous ovarian carcinoma, the FOXM1
+        transcription factor network is significantly altered in the mitotic subtype. Associative analysis indicates that the
+        mitotic subtype is enriched with TP53 mutation/deletion and PIK3CA amplification, while PTEN/CTNNB1
+        mutation mainly occurs in the hormonal and immunoresponsive subtypes. The results have been presented in
+        TCGA Endometrial Cancer workshop (April 9-10, 2012, WashU in St. Louis) and TCGA Semi-Annual Steering
+        Meeting (April 25-27, 2012, Houston). In addition, our Center is assigned to be one of the writing groups and is
+        responsible for contributing a comprehensive figure to the first TCGA EC marker paper.
+                    </div>
+                    <div style="text-align: center;">
+                        <img src="images/endometrial1.png" alt="comprehensive endometrial"></div>
+                    <br/>
+                    <small>
+                        <b>Figure 4: Gene Expression Profiling Identifies Three Gene Expression
+        Subtypes.</b> 
+                        (A) Tumors from TCGA separated into three clusters on the basis
+        of gene expression, namely mitotic, hormonal and immunoresponsive. (B) The
+        three clusters are significantly correlated with patient overall survival and
+        progression-free survival. (C) Association of the three clusters with
+        clinical/pathological features, mutation, copy-number variation and cluster
+        assignments from different data types. (D) Molecular and clinical features
+        associated with tumor histology and FOXM1 transcriptional factor network are
+        significantly activated in the mitotic subtype.
+                    </small>
+                </div>
+            </div>
+            <a name="glioblastoma_multiforme">
+                <br/>
+                <br/>
+            </a>
+            <div class="row">
+                <div class="span9">
+                    <div class="page-header">
+                        <h2>Glioblastoma Multiforme</h2>
+                    </div>
+                    <div>
+                        The second phase of glioblastoma multiforme (GBM) analysis is ongoing, and the Center is an active
+        participant in the Analysis Working Group led by Lynda Chin and Cameron Brennan. For this analysis, we have
+        inferred associations in the data using pairwise statistical analysis as well as the RF-ACE algorithm. These
+        inference methods have been applied to the entire GBM data set, as well as subsets of the data that have
+        been partitioned by the four GBM subtypes to identify subtype-specific associations (e.g., the impact of TP53
+        mutations in classical, mesenchymal, neural, and proneural). The resulting associations have all been made
+        available through
+                        <a href="http://explorer.cancerregulome.org/re/" target="_blank">Regulome Explorer</a>
+                        and collaboratively shared with other members of the Analysis Working
+        Group. Key associations that have emerged from these analyses and data exploration tools are mutual
+        exclusivity and co-occurrence of genomic events, identification of associations between these genomic events
+        and molecular features (e.g., mutations that impact gene and miRNA expression), and subtle relationships
+        between molecular features and clinical data or sample characteristics (e.g., IDH1 mutation and
+        hypermethylation phenotype)..
+                    </div>
+                </div>
+            </div>
+            <a name="ovarian_cancer">
+                <br/>
+                <br/>
+            </a>
+            <div class="row">
+                <div class="span9">
+                    <div class="page-header">
+                        <h2>Ovarian Cancer</h2>
+                    </div>
+                    <div>
+                        We reviewed TCGA data for 316 patients with high-grade serous ovarian cancer, the most common form of the
+        disease. Data for each patient included a genetic survey of the surgically resected primary tumor and
+        comprehensive clinical data. Most patients in the study had stage III or IV disease and G2 or G3 tumors.
+        BRCA2 mutations were found in 29 ovarian cancers and BRCA1 mutations in 37. All patients had undergone
+        surgery followed by platinum-based chemotherapy. Patients with BRCA2 mutations in their tumors had a significantly
+        higher 5-year overall survival rate (61%) than did patients without BRCA mutations in their tumors
+        (25%). The 3-year progression-free survival rate also was significantly higher for patients whose tumors had
+        BRCA2 mutations (44%) than for those whose tumors did not have BRCA mutations (16%). BRCA1 mutations
+        in tumors were not significantly associated with survival. All patients whose ovarian cancers had BRCA2
+        mutations responded to primary platinum-based chemotherapy, compared with 82% of patients whose tumors
+        did not have any BRCA mutation and 80% of patients whose tumors had BRCA1 mutations. The median
+        platinum-free duration was 18.0 months for patients whose tumors had BRCA2 mutations, 11.7 months for
+        patients whose tumors did not have any BRCA mutations, and 12.5 months for those whose tumors had
+        BRCA1 mutations. We also found that tumors with BRCA2 mutations had a median 84 mutations per tumor
+        sample compared with 52 mutations per tumor sample for tumors without BRCA mutations. This last aspect,
+        called the hypermutation/mutator phenotype for BRCA2 mutated ovarian cancers, might be a factor in the
+        development and growth of a tumor and a sign of its vulnerability to DNA-damaging drugs. This study was
+        reported in [D. Yang, S. Khan, Y. Sun, K. Hess, I. Shmulevich, A. K. Sood, W. Zhang, "Association of BRCA1
+        and BRCA2 Mutations With Survival, Chemotherapy Sensitivity, and Gene Mutator Phenotype in Patients With
+        Ovarian Cancer," JAMA, Vol. 306, No. 14, pp. 1557-1565, 2011.]
+                    </div>
+                </div>
+            </div>
+            <a name="pancancer_analysis">
+                <br/>
+                <br/>
+            </a>
+            <div class="row">
+                <div class="span9">
+                    <div class="page-header">
+                        <h2>Pan-Cancer Analysis</h2>
+                    </div>
+                    <div>
+                        The Center plans to actively participate in the pan-cancer working group and Dr. Shmulevich is one of the
+        cochairs. TCGA presents unprecedented opportunities to study molecular differences and
+        similarities across multiple different cancers and their subtypes. The opportunity is to complement the
+        traditional "tissue of origin" classification of cancers with multidimensional molecular characterization.
+        Analytical tools such as random forest regression will be applied to multiple cancers to characterize subtypes,
+        which may span multiple histological categories, at the level of molecular associations among genetic
+        aberrations (mutations, translocations), expression, epigenetic and other measurements. The Center is also
+        developing pathway level exploration within Regulome Explorer. This capability, already in prototype, allows
+        the scientist to view a particular pathway at the level of associations and to identify enrichment of other
+        pathways associated with the pathway of choice. These associations can be limited to specific datatypes or
+        combinations thereof. Such capabilities will be important for pan-cancer analysis at the pathway level.
+        Furthermore, PARADIGM (UCSC) integrated pathway levels are ingested as features into our feature matrices
+        and analyzed jointly with all other features, providing an additional pathway-level view.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div>
+                &copy; 2012, Institute for Systems Biology, All Rights Reserved
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
