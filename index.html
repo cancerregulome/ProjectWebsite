@@ -26,51 +26,51 @@
     <script type="text/javascript">
         $(document).ready(function() {
             var currentPage = 0;
-            var pages = $('.page'),
-            maxPage = pages.length - 1;
+            var pages = $('.page');
+            var maxPage = pages.length - 1;
 
-          $("#menusContainer").load("menus.html");
-          $('.previous').on('click','a', function(e){
+            $("#menusContainer").load("menus.html");
+            $('.previous').on('click', 'a', function (e) {
                 pages.eq(currentPage).hide();
-                currentPage = Math.max(0,--currentPage);
+                currentPage = Math.max(0, --currentPage);
                 insertPage(pages.eq(currentPage));
                 updatePager();
-          });
-          $('.next').on('click','a', function(e){
+            });
+            $('.next').on('click', 'a', function (e) {
                 pages.eq(currentPage).hide();
-                currentPage = Math.min(maxPage,++currentPage);
+                currentPage = Math.min(maxPage, ++currentPage);
                 insertPage(pages.eq(currentPage));
                 updatePager();
-          });
+            });
 
-          function insertPage(selection) {
-            $('.sideEvents-body').html($(selection).innerHTML);
-            $(selection).show();
-          }
+            function insertPage(selection) {
+                $('.sideEvents-body').html($(selection).innerHTML);
+                $(selection).show();
+            }
 
-          function updatePager() {
-            var top;
-            if(currentPage <= 0) {
-                $('.previous').addClass('disabled');
-            } else {
-                $('.previous').removeClass('disabled');
+            function updatePager() {
+                var top;
+                if (currentPage <= 0) {
+                    $('.previous').addClass('disabled');
+                } else {
+                    $('.previous').removeClass('disabled');
+                }
+                if (currentPage >= maxPage) {
+                    $('.next').addClass('disabled');
+                } else {
+                    $('.next').removeClass('disabled');
+                }
             }
-            if (currentPage >= maxPage) {
-                $('.next').addClass('disabled');
-            } else {
-                $('.next').removeClass('disabled');
-            }
-          }
             insertPage(pages.eq(0));
             updatePager();
         });
     </script>
 </head>
 <body>
-<div class="container">
-    <div id="menusContainer"></div>
-    <div id="mainContainer">
-        <div class="row">
+    <div class="container">
+        <div id="menusContainer"></div>
+        <div id="mainContainer">
+            <div class="row">
                 <div class="span9">
                     <div class="hero-unit">
                         <div class="page-header">
@@ -85,12 +85,11 @@
                             </h2>
                         </div>
                         <p>
-                            The Cancer Genome Atlas (TCGA) provides an unprecedented opportunity to take an integrated approach
-                            toward a systems level understanding of regulatory disruptions in cancer. Such disruptions and their
-                            consequences are intertwined within complex dynamical networks through a multitude of interactions
-                            among different types of biomolecules. Understanding such relationships requires multivariate analysis
-                            methods that can be effective in the context of highly heterogeneous data, measurement uncertainty,
-                            and missing data.
+                            <a href="http://cancergenome.nih.gov/" target="_blank">The Cancer Genome Atlas</a> (TCGA) provides an unprecedented opportunity to
+                            take an integrated approach toward a systems level understanding of regulatory disruptions in cancer. Such disruptions and their
+                            consequences are intertwined within complex dynamical networks through a multitude of interactions among different types of
+                            molecules. Understanding such relationships requires multivariate analysis methods that can be effective in the context of highly
+                            heterogeneous data, measurement uncertainty, and missing data.
                         </p>
                     </div>
                     <div class="carousel slide" id="homeCarousel">
@@ -100,16 +99,17 @@
                                     <img src="images/cancer_cell_cover.jpg" width="192" height="250" alt="Cover of Cancer Cell">
                                 </a>
                                 <div class="carousel-caption">
-                                    <p>The cover of Cancer Cell features the <a href="http://www.sciencedirect.com/science/article/pii/S1535610813000032" target="_blank">paper</a>:
-                                    Integrated Analyses Identify a Master MicroRNA Regulatory Network for the Mesenchymal Subtype in Serous Ovarian Cancer</p>
+                                    <p>The cover of Cancer Cell features: <br/>
+                                        <a href="http://www.sciencedirect.com/science/article/pii/S1535610813000032" target="_blank"><strong>"Integrated Analyses Identify a Master MicroRNA Regulatory Network for the Mesenchymal Subtype in Serous Ovarian Cancer"</strong></a>
+                                    </p>
                                 </div>
                             </div>
-                             <div class="item">
+                            <div class="item">
                                 <a href="http://explorer.cancerregulome.org/all_pairs/" target="_blank">
                                     <img src="images/regulome_explorer.png" width="500" height="250" alt="Regulome Explorer">
                                 </a>
                                 <div class="carousel-caption">
-                                    <p>Regulome Explorer: Explore, mine, and visualize complex datasets</p>
+                                    <p><a href="http://explorer.cancerregulome.org/all_pairs/" target="_blank"><strong>Regulome Explorer</strong></a>: Explore, mine, and visualize complex datasets</p>
                                 </div>
                             </div>
                             <div class="item">
@@ -117,7 +117,7 @@
                                     <img src="images/pubcrawl.png" width="500" height="250" alt="Pubcrawl">
                                 </a>
                                 <div class="carousel-caption">
-                                    <p>Pubcrawl: Dynamic network topologies created from literature distances</p>
+                                    <p><a href="http://explorer.cancerregulome.org/pubcrawl/" target="_blank"><strong>Pubcrawl</strong></a>: Dynamic network topologies created from literature distances</p>
                                 </div>
                             </div>
                             <div class="item">
@@ -125,7 +125,7 @@
                                     <img src="images/crc_aggressiveness.png" width="500" height="250" alt="Colorectal Cancer Aggressiveness">
                                 </a>
                                 <div class="carousel-caption">
-                                    <p>CRC Aggressiveness: Explore features related to colorectal cancer aggressiveness</p>
+                                    <p><a href="http://explorer.cancerregulome.org/crc_agg/" target="_blank"><strong>CRC Aggressiveness</strong></a>: Explore features related to colorectal cancer aggressiveness</p>
                                 </div>
                             </div>
                             <div class="item">
@@ -133,7 +133,7 @@
                                     <img src="images/genespot.png" width="500" height="250" alt="GeneSpot">
                                 </a>
                                 <div class="carousel-caption">
-                                    <p>GeneSpot: Explore TCGA data from a Gene-centric point-of-view</p>
+                                    <p><a href="http://genespot.cancerregulome.org/" target="_blank"><strong>GeneSpot</strong></a>: Explore TCGA data from a gene-centric point-of-view</p>
                                 </div>
                             </div>
                         </div>
@@ -143,17 +143,23 @@
                     <div class="row">
                         <div class="span3 hero-span">
                             <h2>Research</h2>
+
                             <p>Development of novel computational approaches for analyzing large-scale heterogeneous data.</p>
+
                             <p><a class="btn" href="research.html">View Details &raquo;</a></p>
                         </div>
                         <div class="span3 hero-span">
                             <h2>Cancer Studies</h2>
+
                             <p>Actively participating and contributing to several TCGA tumor Analysis Working Groups.</p>
+
                             <p><a class="btn" href="cancerstudies.html">View Details &raquo;</a></p>
                         </div>
                         <div class="span3 hero-span">
                             <h2>Software</h2>
+
                             <p>Web-based interactive visualization and exploratory tools, and computational infrastructure that promotes collaborative research.</p>
+
                             <p><a class="btn" href="software.html">View Details &raquo;</a></p>
                         </div>
                     </div>
@@ -163,166 +169,189 @@
                         <div class="sideEvents-heading">
                             <h3>News & Events</h3>
                         </div>
-                            <ul class="pager">
-                              <li class="previous disabled">
+                        <ul class="pager">
+                            <li class="previous disabled">
                                 <a href="#">&larr; Newer</a>
-                              </li>
-                              <li class="next">
+                            </li>
+                            <li class="next">
                                 <a href="#">Older &rarr;</a>
-                              </li>
-                            </ul>
-                            <div class="page">
-                                   <div>
-                            <h4>February 2013</h4>
-                            <div class="sideEventsCell">
-                                <div class="text">
-                                    <a href="http://www.sciencedirect.com/science/article/pii/S1535610813000032" target="_blank">New paper</a> published in Cancer Cell on "Integrated Analyses Identify a Master MicroRNA Regulatory Network for the Mesenchymal Subtype in Serous Ovarian Cancer" as part of the <a href="http://cancergenome.nih.gov/" target="_blank">The Cancer Genome Atlas</a> (TCGA) project.
-                                    <br/><br/>
-                                    The <a href="http://www.cell.com/cancer-cell/issue?pii=S1535-6108(13)X0003-0#" target="_blank">cover of Cancer Cell</a> features the article, with a graphic depicting the analysis.
-                                </div>
-                            </div>
-                        </div>
-                        <hr/>
-                           <div>
-                            <h4>November 2012</h4>
-                            <div class="sideEventsCell">
-                                <div class="text">
-                                    The Center for Systems Analysis of the Cancer Regulome attended the 2nd Annual TCGA Scientific Symposium. The symposium was co-chaired by Ilya Shmulevich.
-                                    <br/><br/>
-                                    Brady Bernard and Hector Rovira gave a <a href="http://cancergenome.nih.gov/newsevents/multimedialibrary/videos/GeneSpotBernard2012" target="_blank">talk</a>, introducing <a href="http://www.genespot.org" target="_blank">Genespot</a>: A Portal for Interactive Gene-Centric Exploration of The Cancer Genome Atlas.
-                                    <br/><br/>
-                                    Dick Kreisberg presented a <a href="http://bit.ly/regex_workshop" target="_blank">workshop</a> on Regulome Explorer.
-                                </div>
-                            </div>
-                        </div>
-                        <hr/>
-                                <div>
-                            <h4>October 2012</h4>
-                            <div class="sideEventsCell">
-                                <div class="text">
-                                    <a href="http://www.nature.com/nature/journal/v490/n7418/full/nature11412.html" target="_blank">New paper</a> published in Nature on comprehensive molecular portraits of human breast tumors as a part of <a href="http://cancergenome.nih.gov/" target="_blank">The Cancer Genome Atlas</a> (TCGA) project.
-                                    <br/><br/>
-                                    An <a href="http://www.nytimes.com/2012/09/24/health/study-finds-variations-of-breast-cancer.html" target="_blank">article</a> related to the work was published in the New York Times.
-                                </div>
-                            </div>
-                        </div>
-                        <hr/>
-                          <div>
-                            <h4>September 2012</h4>
-                            <div class="sideEventsCell">
-                                <div class="text">
-                                    <a href="http://cancergenome.nih.gov/researchhighlights/tcgainaction/CloudMayWidenBottleneck" target="_blank">A recent article</a> on the Shmulevich Group's efforts to analyze genomic information using large computational clusters with cloud infrastructure on demand.
-                                </div>
-                            </div>
-                        </div>
-                        </div>
+                            </li>
+                        </ul>
                         <div class="page">
-                        <div>
-                            <h4>July 2012</h4>
-                            <div class="sideEventsCell">
-                                <div class="text">
-                                    <a href="http://www.nature.com/nature/journal/v487/n7407/full/nature11252.html" target="_blank">New paper</a> published in Nature on Colorectal cancer characterization as a part of <a href="http://cancergenome.nih.gov/" target="_blank">The Cancer Genome Atlas</a> (TCGA) project.
-                                    <br/><br/>
-                                    An <a href="http://www.nytimes.com/2012/07/19/health/research/vast-gene-study-raises-hopes-for-colon-cancer-drugs.html" target="_blank">article</a> related to the work was featured on the home page of the New York Times.
-                                </div>
-                            </div>
-                        </div>
-                        <hr/>
-                        <div>
-                            <h4>June 2012</h4>
-                            <div class="sideEventsCell">
-                                <div class="text">
-                                    Our work was featured during a <a href="https://developers.google.com/compute/io" target="_blank">keynote presentation at the Google I/O 2012 conference</a>.
-                                    <br/><br/>
-                                    The keynote, delivered by Urs Hölzle, Senior Vice President of Infrastructure at Google,
-                                    introduced Google Compute Engine. He demonstrated how
-                                    <a href="http://rf-ace.googlecode.com" target="_blank">RF-ACE</a>, a machine learning
-                                    algorithm that learns associations among genomic and clinical features, can be scaled to
-                                    600,000 cores across Google’s global data centers and the results visualized using a version of
-                                    <a href="http://explorer.cancerregulome.org" target="_blank">Regulome Explorer</a>.
-                                    <br/><br/>
-                                    A case study written by Google can be found <a href="downloads/ComputeISBCaseStudy.pdf" target="_blank">here</a>.
-                                </div>
-                            </div>
-                        </div>
-                        <hr/>
                             <div>
-                            <h4>May 2012</h4>
-                            <div class="sideEventsCell">
-                                <div class="text">
-                                    <a href="http://explorer.cancerregulome.org/" target="_blank">Regulome Explorer</a> is featured in
-                                    <a href="http://www.genengnews.com/gen-articles/mathematics-transforming-bioresearch/4098/" target="_blank">this article</a>
-                                    where <a href="https://www.systemsbiology.org/leroy-hood" target="_blank">ISB founder Dr. Leroy Hood</a> talks about
-                                    the application of mathematics to biological research.
-                                </div>
-                                <div class="image">
-                                    <a href="http://www.genengnews.com/gen-articles/mathematics-transforming-bioresearch/4098/" target="_blank">
-                                        <img src="http://www.genengnews.com/App_Themes/Public/Images/genlogo_footer.gif">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <hr/>
-                        <div>
-                            <h4>March 2012</h4>
-                            <div class="sideEventsCell">
-                                <div class="text">
-                                    <a href="http://explorer.cancerregulome.org/" target="_blank">Regulome Explorer</a> is covered in
-                                    <a href="http://the-scientist.com/2012/03/01/combing-the-cancer-genome/" target="_blank">this story</a>
-                                    about online tools available for analyzing TCGA data.
-                                </div>
-                                <div class="image">
-                                    <a href="http://the-scientist.com/2012/03/01/combing-the-cancer-genome/" target="_blank">
-                                        <img src="images/pubs/TheScientistlogo.magazine.jpg">
-                                    </a>
+                                <h4>February 2013</h4>
+
+                                <div class="sideEventsCell">
+                                    <div class="text">
+                                        <a href="http://www.sciencedirect.com/science/article/pii/S1535610813000032" target="_blank">New paper</a> published in Cancer Cell on
+                                        "Integrated Analyses Identify a Master MicroRNA Regulatory Network for the Mesenchymal Subtype in Serous Ovarian Cancer" as part of the
+                                        <a href="http://cancergenome.nih.gov/" target="_blank">The Cancer Genome Atlas</a> (TCGA) project.
+                                        <br/><br/>
+                                        The <a href="http://www.cell.com/cancer-cell/issue?pii=S1535-6108(13)X0003-0#" target="_blank">cover of Cancer Cell</a> features the
+                                        article, with a graphic depicting the analysis.
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                            <hr/>
+                            <div>
+                                <h4>November 2012</h4>
+
+                                <div class="sideEventsCell">
+                                    <div class="text">
+                                        The Center for Systems Analysis of the Cancer Regulome attended the 2nd Annual TCGA Scientific Symposium. The symposium was co-chaired
+                                        by Ilya Shmulevich.
+                                        <br/><br/>
+                                        Brady Bernard and Hector Rovira gave a <a href="http://cancergenome.nih.gov/newsevents/multimedialibrary/videos/GeneSpotBernard2012"
+                                                                                  target="_blank">talk</a>, introducing <a href="http://www.genespot.org" target="_blank">Genespot</a>:
+                                        A Portal for Interactive Gene-Centric Exploration of The Cancer Genome Atlas.
+                                        <br/><br/>
+                                        Dick Kreisberg presented a <a href="http://bit.ly/regex_workshop" target="_blank">workshop</a> on Regulome Explorer.
+                                    </div>
+                                </div>
+                            </div>
+                            <hr/>
+                            <div>
+                                <h4>October 2012</h4>
+
+                                <div class="sideEventsCell">
+                                    <div class="text">
+                                        <a href="http://www.nature.com/nature/journal/v490/n7418/full/nature11412.html" target="_blank">New paper</a> published in Nature on
+                                        comprehensive molecular portraits of human breast tumors as a part of
+                                        <a href="http://cancergenome.nih.gov/" target="_blank">The Cancer Genome Atlas</a> (TCGA) project.
+                                        <br/><br/>
+                                        An <a href="http://www.nytimes.com/2012/09/24/health/study-finds-variations-of-breast-cancer.html" target="_blank">article</a> related
+                                        to the work was published in the New York Times.
+                                    </div>
+                                </div>
+                            </div>
+                            <hr/>
+                            <div>
+                                <h4>September 2012</h4>
+
+                                <div class="sideEventsCell">
+                                    <div class="text">
+                                        <a href="http://cancergenome.nih.gov/researchhighlights/tcgainaction/CloudMayWidenBottleneck" target="_blank">A recent article</a> on
+                                        the Shmulevich Group's efforts to analyze genomic information using large computational clusters with cloud infrastructure on demand.
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="page">
-                        <div>
-                            <h4>December 2011</h4>
-                            <div class="sideEventsCell">
-                                <div class="text">
-                                    <a href="http://addama.googlecode.com" target="_blank">Addama</a> described in this
-                                    <a href="http://www.nature.com/nmeth/journal/v9/n1/full/nmeth.1815.html" target="_blank">technology feature</a>
-                                    on adaptive technologies for systems biology data integration.
+                            <div>
+                                <h4>July 2012</h4>
+
+                                <div class="sideEventsCell">
+                                    <div class="text">
+                                        <a href="http://www.nature.com/nature/journal/v487/n7407/full/nature11252.html" target="_blank">New paper</a> published in Nature on
+                                        Colorectal cancer characterization as a part of <a href="http://cancergenome.nih.gov/" target="_blank">The Cancer Genome Atlas</a> (TCGA) project.
+                                        <br/><br/>
+                                        An <a href="http://www.nytimes.com/2012/07/19/health/research/vast-gene-study-raises-hopes-for-colon-cancer-drugs.html" target="_blank">article</a>
+                                        related to the work was featured on the home page of the New York Times.
+                                    </div>
                                 </div>
-                                <div class="image">
-                                    <a href="http://www.nature.com/nmeth/journal/v9/n1/full/nmeth.1815.html" target="_blank">
-                                        <img src="images/pubs/nmeth_logo.png">
-                                    </a>
+                            </div>
+                            <hr/>
+                            <div>
+                                <h4>June 2012</h4>
+
+                                <div class="sideEventsCell">
+                                    <div class="text">
+                                        Our work was featured during a <a href="https://developers.google.com/compute/io" target="_blank">keynote presentation at the Google I/O
+                                        2012 conference</a>.
+                                        <br/><br/>
+                                        The keynote, delivered by Urs Hölzle, Senior Vice President of Infrastructure at Google,
+                                        introduced Google Compute Engine. He demonstrated how
+                                        <a href="http://rf-ace.googlecode.com" target="_blank">RF-ACE</a>, a machine learning
+                                        algorithm that learns associations among genomic and clinical features, can be scaled to
+                                        600,000 cores across Google’s global data centers and the results visualized using a version of
+                                        <a href="http://explorer.cancerregulome.org" target="_blank">Regulome Explorer</a>.
+                                        <br/><br/>
+                                        A case study written by Google can be found <a href="downloads/ComputeISBCaseStudy.pdf" target="_blank">here</a>.
+                                    </div>
+                                </div>
+                            </div>
+                            <hr/>
+                            <div>
+                                <h4>May 2012</h4>
+
+                                <div class="sideEventsCell">
+                                    <div class="text">
+                                        <a href="http://explorer.cancerregulome.org/" target="_blank">Regulome Explorer</a> is featured in
+                                        <a href="http://www.genengnews.com/gen-articles/mathematics-transforming-bioresearch/4098/" target="_blank">this article</a>
+                                        where <a href="https://www.systemsbiology.org/leroy-hood" target="_blank">ISB founder Dr. Leroy Hood</a> talks about
+                                        the application of mathematics to biological research.
+                                    </div>
+                                    <div class="image">
+                                        <a href="http://www.genengnews.com/gen-articles/mathematics-transforming-bioresearch/4098/" target="_blank">
+                                            <img src="http://www.genengnews.com/App_Themes/Public/Images/genlogo_footer.gif">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr/>
+                            <div>
+                                <h4>March 2012</h4>
+
+                                <div class="sideEventsCell">
+                                    <div class="text">
+                                        <a href="http://explorer.cancerregulome.org/" target="_blank">Regulome Explorer</a> is covered in
+                                        <a href="http://the-scientist.com/2012/03/01/combing-the-cancer-genome/" target="_blank">this story</a>
+                                        about online tools available for analyzing TCGA data.
+                                    </div>
+                                    <div class="image">
+                                        <a href="http://the-scientist.com/2012/03/01/combing-the-cancer-genome/" target="_blank">
+                                            <img src="images/pubs/TheScientistlogo.magazine.jpg">
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <hr/>
-                        <div>
-                            <h4>October 2011</h4>
-                            <div class="sideEventsCell">
-                                <div class="text">
-                                    <a href="http://jama.jamanetwork.com/article.aspx?articleid=1104495" target="_blank">New paper</a>
-                                    published in the Journal of the American Medical Association showing that women with high-grade
-                                    ovarian cancer live longer and respond better to platinum-based chemotherapy when their tumors
-                                    have BRCA2 genetic mutations.
-                                    <br/>
-                                    <br/>
-                                    There was also an <a href="http://jama.jamanetwork.com/article.aspx?articleid=1104489" target="_blank">editorial</a> published in JAMA.
+                        <div class="page">
+                            <div>
+                                <h4>December 2011</h4>
+
+                                <div class="sideEventsCell">
+                                    <div class="text">
+                                        <a href="http://addama.googlecode.com" target="_blank">Addama</a> described in this
+                                        <a href="http://www.nature.com/nmeth/journal/v9/n1/full/nmeth.1815.html" target="_blank">technology feature</a>
+                                        on adaptive technologies for systems biology data integration.
+                                    </div>
+                                    <div class="image">
+                                        <a href="http://www.nature.com/nmeth/journal/v9/n1/full/nmeth.1815.html" target="_blank">
+                                            <img src="images/pubs/nmeth_logo.png">
+                                        </a>
+                                    </div>
                                 </div>
-                                <div class="image">
-                                    <a href="http://jama.jamanetwork.com/article.aspx?articleid=1104495" target="_blank">
-                                        <img src="images/pubs/jama_logo.gif">
-                                    </a>
+                            </div>
+                            <hr/>
+                            <div>
+                                <h4>October 2011</h4>
+
+                                <div class="sideEventsCell">
+                                    <div class="text">
+                                        <a href="http://jama.jamanetwork.com/article.aspx?articleid=1104495" target="_blank">New paper</a>
+                                        published in the Journal of the American Medical Association showing that women with high-grade
+                                        ovarian cancer live longer and respond better to platinum-based chemotherapy when their tumors
+                                        have BRCA2 genetic mutations.
+                                        <br/>
+                                        <br/>
+                                        There was also an <a href="http://jama.jamanetwork.com/article.aspx?articleid=1104489" target="_blank">editorial</a> published in JAMA.
+                                    </div>
+                                    <div class="image">
+                                        <a href="http://jama.jamanetwork.com/article.aspx?articleid=1104495" target="_blank">
+                                            <img src="images/pubs/jama_logo.gif">
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+        <footer>
+            <div>&copy; 2013, Institute for Systems Biology, All Rights Reserved</div>
+        </footer>
     </div>
-</div>
-    <footer>
-        <div>&copy; 2013, Institute for Systems Biology, All Rights Reserved</div>
-    </footer>
-</div>
 </body>
 </html>
