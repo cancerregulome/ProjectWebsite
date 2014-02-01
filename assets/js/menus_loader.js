@@ -1,3 +1,3 @@
 $(document).ready(function() {
-    $("#menusContainer").load("menus.html");
+    $("#menusContainer").load("html/menus.html");
 });
