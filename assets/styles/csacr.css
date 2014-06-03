@@ -1484,7 +1484,7 @@ table .span24 {
   *margin-right: .3em;
   line-height: 14px;
   vertical-align: text-top;
-  background-image: url("../img/glyphicons-halflings.png");
+  background-image: url("../images/glyphicons-halflings.png");
   background-position: 14px 14px;
   background-repeat: no-repeat;
 }
@@ -1493,7 +1493,7 @@ table .span24 {
   *margin-left: 0;
 }
 .icon-white {
-  background-image: url("../img/glyphicons-halflings-white.png");
+  background-image: url("../images/glyphicons-halflings-white.png");
 }
 .icon-glass {
   background-position: 0      0;
@@ -4241,6 +4241,10 @@ footer {
 }
 .carousel-caption a {
   color: #e98500;
+}
+td a {
+ color: #003f72;
+ font-weight: bold;
 }
 a {
   color: #003f72;

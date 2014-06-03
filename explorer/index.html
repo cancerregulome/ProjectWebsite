@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=9">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Cancer Regulome Tools</title>
+
+    <link href="http://fonts.googleapis.com/css?family=Pontano+Sans|Gentium+Basic" rel="stylesheet" type="text/css">
+    <link href="styles/csacr.css" rel="stylesheet">
+    <link href="styles/csacr-responsive.css" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="scripts/html5.js"></script>
+    <link href="styles/csacr.ie.css" rel="stylesheet">
+    <![endif]-->
+    <script src="scripts/jquery.js"></script>
+    <script src="scripts/bootstrap.js"></script>
+
+    <script type="text/javascript" src="scripts/google_analytics.js"></script>
+    <script type="text/javascript" src="scripts/news_nav.js"></script>
+    <script type="text/javascript" src="scripts/menus_loader.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div id="menusContainer"></div>
+        <div id="mainContainer">
+            <div class="row">
+                <div class="page-header">
+                    <h1>Cancer Regulome Tools & Data</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="page-header">
+                    <h2>Featured Tools</h2>
+                </div>
+                <div class="span6 hero-span">
+                    <a target="_blank" href="http://explorer.cancerregulome.org/all_pairs/">
+                        <img src="images/allpairs_icon.png" style="border:solid orange 2px;">
+                        <h2>Regulome Explorer</h2>
+                    </a>
+                    <p>Explore associations among heterogeneous features.</p>
+                </div>
+                <div class="span6 hero-span">
+                    <a target="_blank" href="http://genespot.cancerregulome.org/">
+                        <img src="images/genespot.png" style="border:solid orange 2px;" width=104 height=104>
+                        <h2>Genespot</h2>
+                    </a>
+
+                    <p>
+                        Compare gene-centric and clinical features across tumor types.
+                    </p>
+                </div>
+            </div>
+            <div style="height:30px;"></div>
+            <div class="row">
+                <div class="page-header">
+                    <h2>Datasets</h2>
+                </div>
+                <div class="span12">
+                    <h3>
+                        Recently Added
+                        <small></small>
+                    </h3>
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>Tumor Type</th>
+                                <th>TCGA ID</th>
+                                <th>Latest Dataset Release</th>
+                                <th>Regulome Explorer Datasets</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Bladder</td>
+                                <td>BLCA</td>
+                                <td>05/20/13</td>
+                                <td>
+                                    <a target="_blank" href="http://explorer.cancerregulome.org/all_pairs/?dataset=blca_20may13_test">Nature Manuscript</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Endometrial</td>
+                                <td>UCEC</td>
+                                <td>06/28/13</td>
+                                <td>
+                                    <a target="_blank" href="http://explorer.cancerregulome.org/all_pairs/?dataset=ucec_28jun13b_seq_tumor_only">Latest</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Kidney - Clear Cell</td>
+                                <td>KIRC</td>
+                                <td>10/01/12</td>
+                                <td>
+                                    <a target="_blank" href="http://explorer.cancerregulome.org/all_pairs/?dataset=kirc_01oct12_A_pw">Latest</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h3>
+                        <a href="datasets.html">All Datasets</a>
+                    </h3>
+                </div>
+            </div>
+            <div style="height:30px;"></div>
+            <div class="row">
+                <div class="page-header">
+                    <h2>
+                        New Tools
+                        <small>Under active development</small>
+                    </h2>
+                </div>
+                <div class="span6 hero-span">
+                    <a target="_blank" href="http://explorer.cancerregulome.org/micro">
+                        <img src="images/micro_logo.png" style="border:solid orange 2px;" width=104 height=104>
+                        <h2>Micro</h2>
+                    </a>
+                    <p>
+                        Discover associations contrary to conventional biological process.
+                    </p>
+                </div>
+                <div class="span6 hero-span">
+                    <a target="_blank" href="https://github.com/IlyaLab/SeqPeek">
+                        <img src="images/seqpeek.png" style="border:solid orange 2px;" width=104 height=104>
+                        <h2>Seqpeek</h2>
+                    </a>
+                    <p>
+                        Browse genomic and intergenic variants, along with clinical relationships.
+                    </p>
+                </div>
+            </div>
+            <div style="height:30px;"></div>
+            <div class="row">
+                <div class="page-header">
+                    <h2>Additional Tools</h2>
+                </div>
+                <div class="span6 hero-span">
+                    <a target="_blank" href="http://explorer.cancerregulome.org/crc_agg/">
+                        <img src="images/crc_icon.png" style="border:solid orange 2px;">
+                        <h2>CRC Aggressiveness Explorer</h2>
+                    </a>
+
+                    <p>
+                        Identify features associated with tumor aggressiveness in Colorectal data
+                    </p>
+
+                </div>
+                <div class="span6 hero-span">
+                    <a target="_blank" href="http://explorer.cancerregulome.org/pubcrawl/">
+                        <img src="images/pubcrawl.png" style="border:solid orange 2px;">
+                        <h2>Pubcrawl</h2>
+                    </a>
+
+                    <p>Traverse graphs of semantically associated knowledge.</p>
+
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div>
+                &copy; 2014, Institute for Systems Biology, All Rights Reserved
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
