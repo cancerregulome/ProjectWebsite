@@ -69,35 +69,6 @@
                 </div>
             </div>
         </div>
-        <a name="protein_domainlevel_mutation_annotations"><br/><br/></a>
-        <div class="row">
-            <div class="span12">
-                <div class="row">
-                    <div class="span9">
-                        <div class="page-header">
-                            <h2>Protein Domain-level Mutation Annotations</h2>
-                        </div>
-                        <p>
-                            The impact of somatic mutations are assessed by including protein domain-level binarization as features in pairwise statistical tests
-                            of heterogeneous TCGA data. Somatic mutation data is converted into protein domain information via a pipeline which incorporates the
-                            software tool <a href="http://www.openbioinformatics.org/annovar" target="_blank">ANNOVAR</a> (reference: Wang K, Li M, Hakonarson H.
-                            ANNOVAR: Functional annotation of genetic variants from next-generation sequencing data Nucleic Acids Research, 38:e164, 2010).
-                            <br/>
-                            <br/>
-                            Several features are generated for each gene depending on the type and sequence position of somatic mutations for each tumor sample in
-                            the data set. Synonymous, missense, nonsense, and frameshift mutation types are considered. Protein domains including any of these
-                            mutation types are annotated as such, with nonsense and frameshift annotations being propagated to all subsequent protein domains.
-                            Example associations identified by pairwise statistical tests between these binary somatic mutation annotations and other data types
-                            include mutual exclusivity and co-occurrence of genomic events, subtype or other phenotype-associated mutations, and significant changes
-                            in gene and miRNA expression, all of which can be viewed within <a href="http://explorer.cancerregulome.org" target="_blank">Regulome Explorer</a>.
-                            <br/>
-                            <br/>
-                            Users may review mutation annotations for selected genes and cancers in <a href="http://genespot.org" target="_blank">GeneSpot</a>, using the <strong>"Protein Mutations Per Cancer Type"</strong> map.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
         <a name="regulome_explorer_research"><br/><br/></a>
         <div class="row">
             <div class="span9">
@@ -159,32 +130,32 @@
                 </div>
             </div>
         </div>
-        <a name="pubcrawl_research"><br/><br/></a>
+        <a name="protein_domainlevel_mutation_annotations"><br/><br/></a>
         <div class="row">
-            <div class="span9">
-                <div class="page-header">
-                    <h2>Pubcrawl</h2>
-                </div>
-                <p>
-                    We are combining semantic-based information in the literature with multivariate data-driven analysis to investigate the relationship between
-                    genomic aberrations in cancer and the ensuing dysfunction of biological networks. To characterize semantic information in the literature, we
-                    have calculated a normalized MEDLINE distance (NMD) according to Cilibrasi and Vitanyi [Rudi L. Cilibrasi and Paul M.B. Vitanyi. The Google
-                    similarity distance. IEEE Transactions on Knowledge and Data Engineering, 19:370-383, 2007.] for all gene name pairs and their aliases in
-                    MEDLINE titles and abstracts. From this matrix of semantic distances, we can cluster, traverse, and apply many other machine-learning & graph
-                    theoretic approaches to literature-based networks.
-                    <br/>
-                    <br/>
-                    We are combining this prior information with multivariate data-driven associations inferred from TCGA data sets (see 1 above) to validate
-                    known associations and identify previously uncharacterized areas of investigation. While we have pre-computed the normalized semantic distance
-                    for all gene name pairs, de novo search capabilities are also available for any user-defined term (e.g., calculating the distance between
-                    ‘metastasis’ and all gene names).
-                </p>
-                <br/>
-                <img src="images/pubcrawl_research.png" alt="Pubcrawl">
-            </div>
-            <div class="span3">
-                <div class="well sideinfo">
-                    <h8>Use <a href="http://explorer.cancerregulome.org/pubcrawl/" target="_blank">Pubcrawl</a></h8>
+            <div class="span12">
+                <div class="row">
+                    <div class="span9">
+                        <div class="page-header">
+                            <h2>Protein Domain-level Mutation Annotations</h2>
+                        </div>
+                        <p>
+                            The impact of somatic mutations are assessed by including protein domain-level binarization as features in pairwise statistical tests
+                            of heterogeneous TCGA data. Somatic mutation data is converted into protein domain information via a pipeline which incorporates the
+                            software tool <a href="http://www.openbioinformatics.org/annovar" target="_blank">ANNOVAR</a> (reference: Wang K, Li M, Hakonarson H.
+                            ANNOVAR: Functional annotation of genetic variants from next-generation sequencing data Nucleic Acids Research, 38:e164, 2010).
+                            <br/>
+                            <br/>
+                            Several features are generated for each gene depending on the type and sequence position of somatic mutations for each tumor sample in
+                            the data set. Synonymous, missense, nonsense, and frameshift mutation types are considered. Protein domains including any of these
+                            mutation types are annotated as such, with nonsense and frameshift annotations being propagated to all subsequent protein domains.
+                            Example associations identified by pairwise statistical tests between these binary somatic mutation annotations and other data types
+                            include mutual exclusivity and co-occurrence of genomic events, subtype or other phenotype-associated mutations, and significant changes
+                            in gene and miRNA expression, all of which can be viewed within <a href="http://explorer.cancerregulome.org" target="_blank">Regulome Explorer</a>.
+                            <br/>
+                            <br/>
+                            Users may review mutation annotations for selected genes and cancers in <a href="http://genespot.org" target="_blank">GeneSpot</a>, using the <strong>"Protein Mutations Per Cancer Type"</strong> map.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
