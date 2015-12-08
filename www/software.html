@@ -44,44 +44,12 @@
                         <li>Associations among multiple types of features (e.g., gene expression, methylation, copy number variation, clinical), computed using
                             random forest regression and displayed within an interactive Circvis tool.</li>
                         <li>Individual genome aberrations identified through the analysis of structural variations using FastBreak.</li>
-                    </ul>
-                    Regulome Explorer is undergoing a design review. Several aspects will be enhanced, including data services, user interface, and
-                    interoperability with external tools. Entire new functionalities are also slated to be introduced. Supporting collaboration among users will be
-                    a key focus. Persistence of analytical tasks and workflows will enable users to search through the large analytical result sets for potentially
-                    novel feature associations.
-                    <br/>
-                    <br/>
+                    
                     Read more about Regulome Explorer in its <a href="http://regulome-explorer.googlecode.com" target="_blank">open source project</a>.
                     <br/>
                 </div>
             </div>
-            <hr/>
-            <div>
-                <h4>Pubcrawl</h4>
-                <div>
-                    This tool provides a way to view a gene network based on literature distances in medline, and protein domain interactions. We have extended the
-                    application for TCGA specific datasets to explore the associations between genes found in our pairwise and RF-ACE analyses, and view the
-                    relative mutation levels of genes for a selected set of patients.
-                    <br/>
-                    <br/>
-                    Read more about Pubcrawl in its <a href="http://pubcrawl.googlecode.com" target="_blank">open source project</a>.
-                    <br/>
-                </div>
-            </div>
-            <hr/>
-            <div>
-                <h4>GeneSpot</h4>
-                <div>
-                    This tool provides a way to view a TCGA data from a gene-centric point-of-view.  It includes a number of interactive visualizations, and allows
-                    the user to save their current exploration.  This application also enables the user to select specific cancers and genes of interest, and load
-                    data that is generated from a variety of TCGA analysis.
-                    <br/>
-                    <br/>
-                    Read more about GeneSpot in its <a href="http://github.com/cancerregulome/GeneSpot" target="_blank">open source project</a>.
-                    <br/>
-                </div>
-            </div>
-            <hr/>
+            <hr/>            
             <div>
                 <h4>Colorectal Cancer Aggressiveness Explorer</h4>
                 <div>
@@ -97,102 +65,10 @@
                     <h4>Web Applications</h4>
                 </div>
                 <ul>
-                    <li>
-                        <h8><a href="http://explorer.cancerregulome.org" target="_blank">Regulome Explorer</a></h8>
-                        <ul>
-                            <li><a href="http://explorer.cancerregulome.org/all_pairs/" target="_blank">All Pairs Analysis</a></li>
-                            <li><a href="http://explorer.cancerregulome.org/re/" target="_blank">Random Forest Analysis</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="http://explorer.cancerregulome.org/crc_agg/" target="_blank">CRC Aggressiveness Explorer</a></li>
-                    <li><a href="http://explorer.cancerregulome.org/pubcrawl/" target="_blank">Pubcrawl</a></li>
-                    <li><a href="http://genespot.org" target="_blank">GeneSpot</a></li>
-                    <li><a href="http://dodoma.systemsbiology.net" target="_blank">DoDoMa</a></li>
+                     <li><a href="http://explorer.cancerregulome.org/all_pairs/" target="_blank"> Regulome Explorer: All Pairs Analysis</a></li>
+                     <li><a href="http://explorer.cancerregulome.org/crc_agg/" target="_blank">CRC Aggressiveness Explorer</a></li>
                 </ul>
             </div>
-        </div>
-    </div>
-    <a name="visualizations"><br/><br/></a>
-    <div class="row">
-        <div class="span12">
-            <div class="row">
-                <div class="span9">
-                    <div class="page-header">
-                        <h2>Visualizations</h2>
-                    </div>
-                    <div>
-                        We have created a variety of interactive visualizations and placed them within a library called Visquick. Visquick is a suite of
-                        visualizations that are rendered in a modern web browser. It includes a set of core functionalities with each tool. The configuration of a
-                        visualization can be defined dynamically, including size, color, layout, and interaction behavior. Hovercards are displayed whenever the
-                        cursor is placed over a data point within a tool. Additional information about the data point is then provided, as well as links to
-                        external websites containing contextual information relating to the selected piece of data.
-                        <br/>
-                        <br/>
-                        Read more about Visquick in its <a href="http://visquick.googlecode.com" target="_blank">open source project</a>.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <a name="infrastructure"><br/><br/></a>
-    <div class="row">
-        <div class="span9">
-            <div class="page-header">
-                <h2>Infrastructure</h2>
-            </div>
-            <div>
-                <h4>Cloud Services</h4>
-                We have explored the use of cloud technologies to deploy secure versions of Regulome Explorer and Pubcrawl. These HTML5 web applications
-                are deployed to <a href="http://developers.google.com/appengine" target="_blank">Google App Engine</a> and
-                <a href="http://aws.amazon.com" target="_blank">Amazon Web Services</a> using Addama (see below). User authentication is managed by an OpenID
-                provider, and secure API keys are generated by Addama for programmatic access by computational researchers. Data exploration and query capabilities
-                to relational and graph databases, and search indexes are provided through standardized REST+JSON programming interfaces.
-                <br/>
-                <img src="images/infrastructure.png" alt="Infrastructure">
-            </div>
-            <hr/>
-            <div>
-                <h4>Addama</h4>
-                <div>
-                    The Adaptive Data Management Service Architecture (or Addama) has been designed to support the needs of researchers at ISB. Its main goals are
-                    to support ad-hoc software development within the research enterprise, to facilitate the integration of large heterogeneous data, and to
-                    provide standardized interfaces for a variety of data management systems (e.g. relational databases, search engines, graph databases). Addama
-                    provides REST+JSON web services for use by web applications, visualizations, and from the command-line by computational researchers. It also
-                    offers a platform for the rapid development and deployment of HTML5 web applications using security and authentication protocols (OpenID)
-                    provided by <a href="http://developers.google.com/appengine" target="_blank">Google App Engine</a>.
-                    <br/>
-                    <br/>
-                    Read more about Addama in its <a href="http://addama.googlecode.com" target="_blank">open source project</a>.
-                </div>
-            </div>
-            <hr/>
-            <div>
-                <h4>Golem</h4>
-                <div>
-                    Golem (Go Launch On Every Machine) is a simple and lightweight open source system for distributing and load balancing analysis jobs across many
-                    machines. Using Golem on our internal server cluster, an exhaustive search for relationships among sample features that requires tens of
-                    thousands of machine hours can be accomplished in a few hours of real time. Its focus on simplicity makes it easy for researchers to
-                    parallelize analysis written in any language and we have used it to speed up many tasks including pairwise correlations, multivariate machine
-                    learning using random forest, and structural variation analysis using Fastbreak.
-                    <br/>
-                    <br/>
-                    Read more about Golem in its <a href="http://golem.googlecode.com" target="_blank">open source project</a>.
-                </div>
-            </div>
-            <hr/>
-            <div>
-                <h4>Hukilau</h4>
-                 <div>
-                     Our analysis has created numerous types of associations between features in TCGA data. <b>Graph databases</b> are enabling us to navigate the
-                     resulting multi-relational networks. A general framework, <a href="http://hukilau.googlecode.com" target="_blank">Hukilau</a>, is being
-                     developed to integrate these databases. It currently supports the <a href="http://neo4j.org" target="_blank">Neo4j graph database</a>. Hukilau
-                     provides scripts to load nodes and relationships into a Neo4j graph database, and a web service interface to query nodes and relationships.
-                     <br/>
-                     <br/>
-                     Read more about Hukilau in its <a href="http://hukilau.googlecode.com" target="_blank">open source project</a>.
-                </div>
-            </div>
-            <hr/>
         </div>
     </div>
     <a name="data_analysis"><br/><br/></a>
@@ -226,16 +102,6 @@
                         </div>
                     </div>
                     <hr/>
-                    <div>
-                        <h4>Dodoma</h4>
-                        <div>
-                            This software package and companion web application automatically identifies transcription factors with matching DNA binding domains,
-                            and returns all associated position weight matrix (PWM) identifiers from JASPAR, TRANSFAC, and UniPROBE databases.
-                            <br/>
-                            <br/>
-                            Read more about DoDoMa in its <a href="http://dodoma.googlecode.com" target="_blank">open source project</a>.
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
